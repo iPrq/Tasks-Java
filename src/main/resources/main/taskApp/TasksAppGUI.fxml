@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="488.0" prefWidth="709.0" stylesheets="@MainAppStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.javafxtemplate.MainAppController">
+<AnchorPane prefHeight="490.0" prefWidth="736.0" stylesheets="@MainAppStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.taskApp.MainAppController">
    <children>
-      <Pane layoutY="31.0" prefHeight="456.0" prefWidth="709.0" styleClass="mainPane">
+      <Pane layoutY="31.0" prefHeight="456.0" prefWidth="736.0" styleClass="mainPane">
          <children>
             <Pane prefHeight="456.0" prefWidth="172.0" styleClass="optionPane">
                <children>
@@ -43,11 +43,11 @@
                   </Pane>
                </children>
             </Pane>
-            <Pane fx:id="tasksPane" layoutX="172.0" prefHeight="456.0" prefWidth="537.0">
+            <Pane fx:id="tasksPane" layoutX="172.0" prefHeight="456.0" prefWidth="564.0">
                <children>
-                  <ScrollPane layoutY="51.0" prefHeight="358.0" prefWidth="537.0">
+                  <ScrollPane fx:id="taskScrollpane" layoutY="51.0" prefHeight="358.0" prefWidth="564.0">
                      <content>
-                        <VBox fx:id="tasksVbox" prefHeight="344.0" prefWidth="537.0" styleClass="tasksvbox" />
+                        <VBox fx:id="tasksVbox" prefHeight="358.0" prefWidth="565.0" styleClass="tasksvbox" />
                      </content>
                   </ScrollPane>
                   <Label layoutX="6.0" layoutY="9.0" prefHeight="45.0" prefWidth="262.0" text="My Tasks">

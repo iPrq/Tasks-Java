@@ -1,6 +1,6 @@
-package main.javafxtemplate;
+package main.taskApp;
 
-import static main.javafxtemplate.MainApplication.run;
+import static main.taskApp.MainApplication.run;
 
 public class Main {
     public static void main(String[] args) {

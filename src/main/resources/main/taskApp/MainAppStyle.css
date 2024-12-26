@@ -31,3 +31,8 @@
 .dashboardbtnprsd{
     -fx-background-color: #0a2950;
 }
+
+.typePane {
+    -fx-background-color: #00000026;
+    -fx-background-radius: 15;
+}
