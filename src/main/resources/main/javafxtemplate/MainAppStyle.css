@@ -1,0 +1,33 @@
+.root{
+    -fx-background-color: #041224;
+    -fx-background-radius: 20 20 0 0;
+}
+
+.mainPane{
+    -fx-background-color: #2a044a;
+}
+
+.optionPane{
+    -fx-background-color: #11021e;
+}
+
+.label{
+    -fx-text-fill: white;
+    -fx-font-family: Segoe UI;
+}
+
+.tasksvbox{
+    -fx-background-color: #2a044a;
+}
+
+.dashboardbtn{
+    -fx-background-color: #00000026;
+    -fx-background-radius: 15;
+}
+
+.dashboardbtn-hover{
+    -fx-cursor: hand;
+}
+.dashboardbtnprsd{
+    -fx-background-color: #0a2950;
+}
