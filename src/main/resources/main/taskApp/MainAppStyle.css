@@ -36,3 +36,8 @@
     -fx-background-color: #00000026;
     -fx-background-radius: 15;
 }
+
+.root2 {
+    -fx-background-color: #041224;
+    -fx-background-radius: 0 0 20 20;
+}
