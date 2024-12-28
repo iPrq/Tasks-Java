@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import main.taskApp.database.Task;
+import main.taskApp.database.TasksRepository;
 import main.taskApp.service.UIlogic;
 
 import java.net.URL;
@@ -41,6 +42,7 @@ public class AddTaskController implements Initializable {
         String time = timeField.getText();
         String tag = tagCombobox.getValue();
         uIlogic.addpane(new Task(taskName, tag, date, time));
+        TasksRepository.adddata(new Task(taskName, tag, date, time));
         stage.close();
     }
 

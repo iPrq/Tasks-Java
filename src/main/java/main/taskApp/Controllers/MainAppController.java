@@ -7,11 +7,13 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import main.taskApp.AddTaskApplication;
+import main.taskApp.database.Task;
 import main.taskApp.database.TasksRepository;
 import main.taskApp.service.UIlogic;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainAppController  implements Initializable {
@@ -43,7 +45,11 @@ public class MainAppController  implements Initializable {
     public void init(Stage stage) {
         tasksRepository.createdatabase();
         if (tasksRepository.returndata() != null) {
-
+           List<Task> tasks = tasksRepository.returndata();
+           for (Task task : tasks) {
+                uilogic.addpane(task);
+                tasksVbox.getChildren().add(uilogic.getTaskPane());
+           }
         }
         titlePane.setOnMousePressed(MouseEvent -> {
             x = MouseEvent.getSceneX();

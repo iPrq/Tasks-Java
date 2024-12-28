@@ -6,7 +6,7 @@ import java.util.List;
 
 public class TasksRepository {
 
-    private Connection connect() {
+    private static Connection connect() {
         Connection conn = null;
         try {
             String url = "jdbc:sqlite:tasks.db";
@@ -31,8 +31,8 @@ public class TasksRepository {
             throw new RuntimeException(e);
         }
     }
-    public void adddata(Task newtask) {
-        String sql = "INSERT INTO utasks(taskname, date, type, time) VALUES(?,?,?,?)";
+    public static void adddata(Task newtask) {
+        String sql = "INSERT INTO utasks(taskname, type, date, time) VALUES(?,?,?,?)";
         try(Connection connection  = connect(); PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, newtask.taskname);
             pstmt.setString(2, newtask.type);
@@ -51,10 +51,10 @@ public class TasksRepository {
         try (Connection connection = connect(); PreparedStatement pstmt = connection.prepareStatement(sql); ResultSet rs = pstmt.executeQuery()) {
             while (rs.next()) {
                 task = new Task(
-                        rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
-                        rs.getString(4)
+                        rs.getString(4),
+                        rs.getString(5)
                 );
                 tasks.add(task);
             }

@@ -49,7 +49,6 @@ public class UIlogic {
         taskPane.getChildren().add(tagPane);
         taskPane.getChildren().add(datelbl);
         taskPane.getChildren().add(timelbl);
-        tasksRepository.adddata(task);;
     }
 
     public Pane getTaskPane() {
